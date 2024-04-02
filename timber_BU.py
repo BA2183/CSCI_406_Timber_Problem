@@ -26,4 +26,4 @@ def timber(in_arr, head, tail):
     return mem[head][tail]
 
 length, arr = read_input()
-print(timber(arr, 0, length))
+print(timber(arr, 0, length-1))
