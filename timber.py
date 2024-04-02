@@ -1,6 +1,8 @@
 import numpy as np
 import time
 import matplotlib.pyplot as plt
+plt.style.use("Solarize_Light2")
+
 def read_input():
     arr_length = int(input())
     in_arr = [item for item in map(int, input().split())]
