@@ -18,7 +18,7 @@ def perform_test(n):
     time_arr = []
     for i in range(1, n+1):
         # random timber generators
-        curr_arr = np.random.randint(1, 1001, size=n)
+        curr_arr = np.random.randint(1, 1001, size=i)
         # timer
         start_time = time.time()
         timber(curr_arr, 0, i-1)
