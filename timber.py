@@ -13,6 +13,11 @@ def timber(in_arr, head, tail):
         return in_arr[head]
     return sum(in_arr[head:tail+1]) - min(timber(in_arr, head+1, tail), timber(in_arr, head, tail-1))
 
+def timber_idk(in_arr, head, tail):
+    if head == tail+1:
+        return max(in_arr[head], in_arr[tail])
+    return max(in_arr[head] + min(timber(in_arr, head+2, tail), timber(in_arr, head+1, tail-1)), in_arr[tail] + min(timber(in_arr, head+1, tail-1), timber(in_arr, head, tail-2)))
+print(timber_idk([5,6,9,7],0,3))
 def perform_test(n):
     iter_arr = []
     time_arr = []
@@ -30,11 +35,11 @@ def perform_test(n):
 
     return time_arr, iter_arr
 
-time_arr, iter_arr = perform_test(20)
-# plot
-plt.plot(iter_arr, time_arr)
-plt.xticks(iter_arr)
-plt.xlabel("timber length")
-plt.ylabel("time (seconds)")
-plt.title("Timber() performance based on timber length")
-plt.show()
+# time_arr, iter_arr = perform_test(20)
+# # plot
+# plt.plot(iter_arr, time_arr)
+# plt.xticks(iter_arr)
+# plt.xlabel("timber length")
+# plt.ylabel("time (seconds)")
+# plt.title("Timber() performance based on timber length")
+# plt.show()

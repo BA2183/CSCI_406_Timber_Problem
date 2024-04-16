@@ -48,14 +48,14 @@ def perform_test(n):
         print(f"done iter: {i}")
 
     return time_arr, iter_arr
-# length, arr = read_input()
-# print(timber(arr, 0, length-1))
+length, arr = read_input()
+print(timber(arr, 0, length-1))
 
-time_arr, iter_arr = perform_test(2000)
-# plot
-plt.plot(iter_arr, time_arr)
-plt.xticks(iter_arr)
-plt.xlabel("timber length")
-plt.ylabel("time (seconds)")
-plt.title("Timber() performance based on timber length")
-plt.show()
+# time_arr, iter_arr = perform_test(2000)
+# # plot
+# plt.plot(iter_arr, time_arr)
+# plt.xticks(iter_arr)
+# plt.xlabel("timber length")
+# plt.ylabel("time (seconds)")
+# plt.title("Timber() performance based on timber length")
+# plt.show()
